@@ -8,7 +8,7 @@ This repository contains a best-practice example implementation of a **AWS Lambd
 - [How to use/deploy this project?](https://github.com/volenpopov/aws-lambda-vpc#how-to-usedeploy-this-project)
 - [Solution Architecture](https://github.com/volenpopov/aws-lambda-vpc#solution-architecture)
 - [Explanations](https://github.com/volenpopov/aws-lambda-vpc#explanations)
-- [Examples](https://github.com/volenpopov/aws-lambda-vpc#explanations)
+- [Examples](https://github.com/volenpopov/aws-lambda-vpc#examples)
 
 ## What's the idea behind this project?
 
