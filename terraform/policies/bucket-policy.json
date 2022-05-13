@@ -1,0 +1,36 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RestrictPrincipals",
+      "Effect": "Deny",
+      "Action": "s3:*",
+      "Principal": "*",
+      "Resource": [
+        "arn:aws:s3:::${bucket_name}",
+        "arn:aws:s3:::${bucket_name}/*"
+      ],
+      "Condition": {
+        "StringNotEquals": {
+          "aws:PrincipalArn": [
+            "${user_arn}",
+            "${lambda_role_arn}",
+            "arn:aws:iam::${account_id}:root"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "RestrictLambda",
+      "Effect": "Deny",
+      "NotAction": ["s3:ListBucket", "s3:GetObject"],
+      "Principal": {
+        "AWS": "${lambda_role_arn}"
+      },
+      "Resource": [
+        "arn:aws:s3:::${bucket_name}",
+        "arn:aws:s3:::${bucket_name}/*"
+      ]
+    }
+  ]
+}
