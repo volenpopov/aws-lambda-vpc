@@ -26,7 +26,7 @@ This is a demo project that I have implemented with the goal to enhance my pract
 
 ## Solution Architecture
 
-![Please refer to the architecture.png file at the root of the repository](https://github.com/volenpopov/aws-lambda-vpc/blob/main/architecture.png?raw=true)
+![Please refer to the architecture.png file at the root of the repository](https://github.com/volenpopov/aws-lambda-vpc/blob/master/architecture.png)
 
 ## Explanations
 
