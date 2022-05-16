@@ -43,11 +43,12 @@ resource "aws_lambda_function" "this" {
 
   environment {
     variables = {
-      DB_HOST                 = aws_db_instance.this.address
-      DB_PORT                 = local.port_mappings.postgresql
-      DB_USER                 = var.username
-      DB_PASSWORD_SECRET_NAME = aws_secretsmanager_secret.password.name
-      BUCKET_NAME             = aws_s3_bucket.this.id
+      DB_HOST                             = aws_db_instance.this.address
+      DB_PORT                             = local.port_mappings.postgresql
+      DB_USER                             = var.username
+      DB_PASSWORD_SECRET_NAME             = aws_secretsmanager_secret.password.name
+      BUCKET_NAME                         = aws_s3_bucket.this.id
+      AWS_NODEJS_CONNECTION_REUSE_ENABLED = 1
     }
   }
 
